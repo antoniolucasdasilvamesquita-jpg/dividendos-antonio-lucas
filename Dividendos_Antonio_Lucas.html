@@ -1,0 +1,572 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f3ea">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>Dividendos Antônio Lucas</title><style>
+:root{--purple:#2b1a9f;--purple2:#3b2ab4;--green:#16b887;--orange:#f08a24;--ink:#202027;--muted:#777780;--bg:#f4f4f7;--white:#fff;--line:#e8e8ec;--danger:#a40020}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);padding-bottom:88px}.top{height:64px;background:#151321;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 18px}.brand{font-weight:800;letter-spacing:.6px}.brand b{color:#b9b1ff}.refresh{border:0;background:#272432;color:#fff;border-radius:10px;width:42px;height:42px;font-size:25px}.hero{background:linear-gradient(180deg,var(--purple),var(--purple2));color:#fff;text-align:center;padding:22px 16px 28px}.month{font-size:14px;letter-spacing:.5px}.month select{background:transparent;color:#fff;border:0;font-weight:800;font-size:14px;outline:0}.total{font-size:46px;font-weight:900;margin:18px 0 4px}.sub{font-size:13px;opacity:.9;min-height:18px}.content{max-width:760px;margin:auto;padding:20px 14px}.title{font-size:20px;font-weight:800;margin:2px 0 12px}.gap{margin-top:28px}.cards{display:grid;gap:12px}.card{background:#fff;border-radius:16px;box-shadow:0 2px 12px #0000000b;overflow:hidden}.cardmain{padding:18px;display:flex;justify-content:space-between;gap:12px}.symbol{font-size:22px;font-weight:900}.muted{color:var(--muted);font-size:14px;line-height:1.4}.amount{font-size:23px;font-weight:900;color:var(--green);text-align:right;white-space:nowrap}.badge{display:inline-block;background:#eee;border-radius:9px;padding:7px 10px;font-size:12px;font-weight:800;margin-top:7px;color:#555}.badge.today{background:#18bd89;color:#fff}.badge.future{background:#fff0df;color:#a85800}.more{background:#f1f1f3;text-align:center;padding:13px;font-weight:800;color:#666}.portfolio{display:grid;gap:9px}.pitem{background:#fff;border-radius:13px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 2px 10px #00000008}.pactions{display:flex;gap:6px;align-items:center}.pbtn{border:0;border-radius:9px;padding:8px 10px;font-weight:800;background:#eee;color:#555}.pbtn.delete{background:#fff0f0;color:#a40020}.add{width:100%;margin-top:14px;border:0;border-radius:13px;padding:15px;background:var(--purple);color:#fff;font-weight:900;font-size:15px}.bottom{position:fixed;left:0;right:0;bottom:0;height:76px;background:#fff;border-top:1px solid var(--line);display:flex;z-index:20}.nav{flex:1;border:0;background:#fff;color:#777;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-size:23px}.nav span{font-size:10px}.nav.active{color:var(--green)}dialog{border:0;border-radius:18px;width:min(94vw,460px);padding:20px;box-shadow:0 20px 70px #0008}dialog::backdrop{background:#0008}h2{margin:0 0 8px}h3{margin-top:22px}.seg{display:flex;background:#eee;padding:4px;border-radius:10px;margin:14px 0}.seg button{flex:1;border:0;border-radius:8px;padding:11px;font-weight:900}.seg .on{background:var(--purple);color:#fff}label{display:block;font-weight:800;margin:13px 0}input{width:100%;padding:13px;border:1px solid #dcdce2;border-radius:10px;font-size:16px;margin-top:7px}.results{display:grid;gap:7px;margin-top:8px;max-height:250px;overflow:auto}.result{border:0;background:#f2f2f5;border-radius:10px;padding:12px;text-align:left}.result b{display:block}.result small{color:#777}.selected{background:#e8f9f5;border:2px solid #16cdb4;padding:10px;border-radius:10px}.actions{display:flex;gap:8px;margin-top:16px}.primary,.secondary{flex:1;border:0;border-radius:10px;padding:13px;font-weight:900}.primary{background:var(--purple);color:#fff}.secondary{background:#eee}.empty{padding:25px;text-align:center;color:#777;background:#fff;border-radius:12px}.error{padding:12px;background:#fff0f0;color:var(--danger);border-radius:10px;font-size:13px}.hint{font-size:12px;color:#777;margin-top:8px}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:9px}.metric{background:#f3f3f5;border-radius:10px;padding:12px}.metric b{display:block;margin-top:5px}@media(min-width:700px){.content{padding-top:28px}}
+</style>
+<style id="antonio-lucas-light-modern">
+:root{--purple:#c88a22;--purple2:#e2b65b;--green:#16834a;--orange:#c86a13;--ink:#191919;--muted:#66645f;--bg:#f7f3ea;--white:#fff;--line:#e8e0d2;--danger:#a40020}
+html{background:#f7f3ea;color-scheme:light}body{background:#f7f3ea;color:var(--ink);padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+.top{background:#fffdf8;color:#171717;border-bottom:1px solid #e7dece;padding-top:env(safe-area-inset-top);height:calc(64px + env(safe-area-inset-top));position:sticky;top:0;z-index:25}.brand{font-size:15px;letter-spacing:1px}.brand b{color:#b87913}
+.hero{background:linear-gradient(135deg,#fffaf0,#f5ecdc 75%);border-bottom:1px solid #e7dece;color:#29251e}.month select{color:#29251e}.total{color:#bd801d}
+.content{max-width:820px}.title{color:#26231e}.card,.pitem{background:#fff;color:#191919;border:1px solid #eee8de;box-shadow:0 4px 16px #4d3d1b0b}.muted{color:#66645f}.amount{color:var(--green)}.badge{background:#f3eee5;color:#59544b}.badge.today{background:#e1f5e8;color:#16834a;border:1px solid #a9dfba}.badge.future{background:#fff0df;color:#c86a13;border:1px solid #f1c28b}.more{background:#f3eee5;color:#59544b}
+.bottom{background:#fffdf8;border-top:1px solid #e7dece;padding-bottom:env(safe-area-inset-bottom);height:calc(76px + env(safe-area-inset-bottom))}.nav{background:#fffdf8;color:#77736b}.nav.active{color:#c88a22}.refresh{background:#f5eddd;color:#8c621e;border:1px solid #e6d8bb}.add,.primary{background:#d9a441;color:#211909}.secondary,.pbtn{background:#f3eee5;color:#49443b;border:1px solid #e2dacd}.pbtn.delete{background:#fff0f0;color:#a40020;border-color:#f0caca}
+dialog{background:#fffdf8;color:#191919;border:1px solid #e4d8c5}dialog::backdrop{background:#28231d66}input{background:#fff;color:#191919;border-color:#dcd4c7}input:focus{outline:2px solid #d9a441}.result{background:#f8f5ef;color:#191919;border:1px solid #e7dfd3}.result small{color:#66645f}.selected{background:#e8f7ed;border-color:#16834a}.empty{background:#fff;color:#66645f;border:1px solid #eee8de}.error{background:#fff0f0;color:#9b1c1c}.metric{background:#f8f5ef;color:#191919}
+.installApp{border:1px solid #e2d2b2;background:#fff8e8;color:#8c621e;border-radius:10px;padding:10px;font-size:12px;font-weight:800}
+.settings-trigger{font-size:21px;width:42px;height:42px;flex-shrink:0}.settings-intro{margin-bottom:18px}.settings-group{background:#fff;border:1px solid #eee4d4;border-radius:15px;padding:15px;margin:0 0 14px}.settings-group h3{color:#9c6b17;font-size:15px;margin:0 0 12px}.settings-action{display:block;width:100%;margin:8px 0;text-align:center;min-height:48px}.connection-report{font-size:13px;line-height:1.6;margin-top:12px;overflow-wrap:anywhere}.status-box{background:#f8f5ef;border:1px solid #e2dacd;border-radius:10px;padding:12px;font-size:13px;line-height:1.6}.danger-group{border-color:#f0caca}.danger-group h3{color:#a40020}
+a{color:#9c6b17}
+@media(min-width:700px){.content{padding-top:28px}}
+.evolution{padding:16px;margin:14px 0 18px}.evolution-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.evolution-title{font-weight:900;color:#29251e;font-size:17px}.period-label{font-size:11px;color:#66645f;margin:0;min-width:88px}.period-label select{display:block;margin-top:5px;width:100%;padding:8px 5px;border:1px solid #dcd4c7;border-radius:8px;background:#fff;color:#191919}.evolution-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.evolution-metrics .metric{border:1px solid #e2dacd}.evolution-metrics .metric b{font-size:17px;overflow-wrap:anywhere}.evolution-chart{width:100%;overflow:hidden;margin-top:12px;min-height:185px}.evolution-chart svg{display:block;width:100%;height:auto}.evolution-history{margin-top:13px;border-top:1px solid #e7dfd3;padding-top:10px}.evolution-history summary{font-weight:800;color:#9c6b17;cursor:pointer}.history-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #eee8de;font-size:13px}.history-row b{text-align:right}.positive{color:#16834a}.negative{color:#a40020}
+</style>
+</head><body>
+<header class="top"><div class="brand">ANTÔNIO <b>LUCAS</b></div><div style="display:flex;gap:8px;align-items:center">
+<button class="refresh settings-trigger" id="openSettings" title="Configurações" aria-label="Abrir configurações">⚙</button>
+<button class="refresh" id="refresh" title="Atualizar dados online" aria-label="Atualizar dados online">↻</button>
+</div></header>
+<section class="hero" id="proventos-hero"><div class="month">PROVENTOS DE <select id="month" aria-label="Mês"></select> <select id="year" aria-label="Ano"></select></div><div class="total" id="total">R$ 0,00</div><div class="sub" id="status">Preparando...</div></section>
+<main class="content"><section id="page-home"><div class="title">Dividendos de fundos imobiliários</div>
+
+<div id="events" class="cards gap"></div></section><section id="page-portfolio" hidden><div class="title">Carteira de fundos imobiliários</div><div id="portfolio" class="portfolio"></div></section><section id="page-evolution" hidden><div class="title">📈 Evolução</div><div class="seg evolution-tabs" role="tablist" aria-label="Tipo de evolução"></div><section id="evolution-dividends-panel" role="tabpanel"><div class="evolution card" id="dividendEvolution">
+ <div class="evolution-head"><div><div class="evolution-title">Dividendos do mês</div><div id="dividendMonthLabel" class="muted"></div></div></div>
+ <div class="evolution-metrics"><div class="metric"><span class="muted">Total estimado no mês</span><b id="evolutionCurrent">R$ 0,00</b></div></div>
+ <div class="evolution-title" style="margin-top:18px">Evolução dos dividendos recebidos</div><div id="dividendChart" class="evolution-chart" role="img" aria-label="Gráfico mensal dos dividendos recebidos desde o cadastro dos ativos"></div>
+</div></section></section><section id="page-settings" hidden><div class="title">⚙ Configurações</div><p class="muted settings-intro">Gerencie as fontes de dados, teste a conexão e proteja seus registros.</p><div class="settings-group"><h3>🌐 Conexão e dados</h3><button class="secondary settings-action" id="configureSource">Configurar token brapi.dev (opcional)</button><button class="secondary settings-action" id="configureDadosB3">Configurar chave Dados B3 (gratuita)</button><button class="secondary settings-action" id="testConnection">Testar conexão e fontes de dados</button><div id="connectionReport" class="connection-report" role="status" aria-live="polite"></div><p class="hint">As chaves ficam salvas neste navegador e são enviadas à respectiva fonte durante as consultas. A disponibilidade de dados depende do serviço e do plano.</p></div><div class="settings-group"><h3>📲 Instalação</h3><button type="button" class="secondary settings-action" id="installApp">Instalar aplicativo</button><div id="installHelp" class="hint" role="status" aria-live="polite">Instale o aplicativo na tela inicial quando estiver disponível. A instalação completa exige que ele seja aberto por um endereço HTTPS.</div></div><div class="settings-group"><h3>💾 Backup e restauração</h3><button class="secondary settings-action" id="exportBackup">Exportar backup dos dados</button><button class="secondary settings-action" id="importBackup">Importar backup</button><input id="backupFile" type="file" accept="application/json,.json" hidden><p class="hint">O backup inclui carteira, proventos manuais e dados online salvos neste aparelho. As chaves de API não são incluídas.</p></div><div class="settings-group danger-group"><h3>⚠ Gerenciamento</h3><button class="secondary settings-action" id="clearPortfolio">Limpar carteira</button><p class="hint">Esta ação remove os fundos da carteira. Será solicitada confirmação antes de apagar.</p></div><div class="settings-group"><h3>📡 Estado do aplicativo</h3><div id="settingsStatus" class="status-box">Verificando estado da conexão…</div><p class="hint">O estado online do aparelho não garante que cada API esteja respondendo. Use “Testar conexão” para conferir as fontes.</p></div></section><section id="page-add" hidden><div class="title">Adicionar fundo imobiliário</div><p class="muted">Pesquise pelo ticker ou nome do fundo, selecione o resultado e informe a quantidade de cotas.</p><button class="add" id="add">＋ ADICIONAR FUNDO</button></section></main>
+<nav class="bottom"><button class="nav" data-tab="portfolio">▣<span>CARTEIRA</span></button><button class="nav active" data-tab="home">💰<span>PROVENTOS</span></button><button class="nav" data-tab="evolution">📈<span>EVOLUÇÃO</span></button><button class="nav" data-tab="add">＋<span>ADICIONAR</span></button></nav>
+<dialog id="dlg"><h2>Adicionar ativo</h2><p class="muted">Pesquise online pelo nome ou ticker do fundo imobiliário e informe a quantidade de cotas.</p><label>Pesquisar<input id="search" placeholder="Ex.: MXRF11 ou nome do fundo" autocomplete="off"></label><div id="results" class="results"></div><div id="chosen" class="hint"></div><label>Quantidade<input id="qty" type="text" inputmode="decimal" placeholder="Ex.: 10 ou 2,5"></label><div class="actions"><button class="secondary" id="cancel">Cancelar</button><button class="primary" id="save">Salvar</button></div></dialog>
+<dialog id="detail"><div id="detailBody"></div><button class="primary" id="close">Fechar</button></dialog>
+<script>
+let raw=[];
+try{raw=JSON.parse(localStorage.getItem('rp_clean')||'[]')}catch(_){raw=[]}
+const legacyAssets=(Array.isArray(raw)?raw:[]).filter(x=>x&&['stock','exterior'].includes(x.type));
+let remoteCache={};try{remoteCache=JSON.parse(localStorage.getItem('rp_remote_cache')||'{}')}catch(_){remoteCache={}}
+const merged=new Map();
+for(const x of Array.isArray(raw)?raw:[]){const symbol=String(x?.symbol||'').trim().toUpperCase();const type='fii';if(x?.type==='stock'||x?.type==='exterior')continue;const qty=Number(x?.qty);if(!symbol||!(qty>0))continue;const k=type+':'+symbol;if(!merged.has(k))merged.set(k,{symbol,type,qty:0,name:String(x?.name||x?.fundName||''),registeredAt:x?.registeredAt||new Date().toISOString().slice(0,10)});merged.get(k).qty+=qty;if(!merged.get(k).name)merged.get(k).name=String(x?.name||x?.fundName||'')}
+const S={portfolio:[...merged.values()],type:'fii',selected:null,selectedName:'',data:remoteCache,manual:(()=>{try{return JSON.parse(localStorage.getItem('rp_manual_events')||'{}')}catch(_){return {}}})(),month:new Date().getMonth(),year:new Date().getFullYear(),requestSeq:0};
+const monthEl=document.getElementById('month'),yearEl=document.getElementById('year'),totalEl=document.getElementById('total'),statusEl=document.getElementById('status'),eventsEl=document.getElementById('events'),portfolioEl=document.getElementById('portfolio'),dlgEl=document.getElementById('dlg'),detailEl=document.getElementById('detail'),detailBodyEl=document.getElementById('detailBody'),searchEl=document.getElementById('search'),resultsEl=document.getElementById('results'),qtyEl=document.getElementById('qty'),chosenEl=document.getElementById('chosen');
+const money=x=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(x)||0);
+function parseAmount(v){
+  if(typeof v==='number')return Number.isFinite(v)?v:NaN;
+  let s=String(v??'').trim().replace(/[^0-9,.-]/g,'');
+  if(!s)return NaN;
+  if(s.includes(',')&&s.includes('.'))s=s.replace(/\.(?=\d{3}(?:,|$))/g,'').replace(',','.');
+  else if(s.includes(','))s=s.replace(',','.');
+  return Number(s);
+}
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const key=i=>`${i.type}:${i.symbol}`;
+const save=()=>{try{localStorage.setItem('rp_clean',JSON.stringify([...S.portfolio,...legacyAssets]));return true}catch(_){return false}};
+const saveRemoteCache=()=>{try{localStorage.setItem('rp_remote_cache',JSON.stringify(S.data))}catch(_){}};
+let activeSearchController=null;
+function symbolOf(x){return String(x?.symbol||x?.stock||x?.ticker||x?.code||'').trim().toUpperCase()}
+function nameOf(x){return x?.name||x?.shortName||x?.longName||symbolOf(x)}
+const DIRECT_DADOS='https://dadosb3.com';
+const DADOS_B3_TOKEN_KEY='rp_dadosb3_token';
+const directCache=new Map();
+const OFFLINE_FII_CATALOG=[
+ {symbol:'MXRF11',name:'Maxi Renda FII',offlineFallback:true},
+ {symbol:'HGLG11',name:'Pátria Logística FII',offlineFallback:true},
+ {symbol:'KNRI11',name:'Kinea Renda Imobiliária FII',offlineFallback:true},
+ {symbol:'XPML11',name:'XP Malls FII',offlineFallback:true},
+ {symbol:'VISC11',name:'Vinci Shopping Centers FII',offlineFallback:true},
+ {symbol:'XPLG11',name:'XP Log FII',offlineFallback:true},
+ {symbol:'CPTS11',name:'Capitânia Securities II FII',offlineFallback:true},
+ {symbol:'KNSC11',name:'Kinea Securities FII',offlineFallback:true},
+ {symbol:'RBRR11',name:'RBR Rendimento High Grade FII',offlineFallback:true},
+ {symbol:'TRXF11',name:'TRX Real Estate FII',offlineFallback:true},
+ {symbol:'GARE11',name:'Guardian Real Estate FII',offlineFallback:true},
+ {symbol:'BTLG11',name:'BTG Pactual Logística FII',offlineFallback:true},
+ {symbol:'ALZR11',name:'Alianza Trust Renda Imobiliária FII',offlineFallback:true},
+ {symbol:'PVBI11',name:'VBI Prime Properties FII',offlineFallback:true},
+ {symbol:'HGRE11',name:'Pátria Escritórios FII',offlineFallback:true},
+ {symbol:'RZTR11',name:'Riza Terrax FII',offlineFallback:true},
+ {symbol:'MCCI11',name:'Mauá Capital Recebíveis FII',offlineFallback:true},
+ {symbol:'RECR11',name:'REC Recebíveis Imobiliários FII',offlineFallback:true},
+ {symbol:'VGHF11',name:'Valora Hedge Fund FII',offlineFallback:true},
+ {symbol:'IRDM11',name:'Iridium Recebíveis Imobiliários FII',offlineFallback:true}
+];
+const stripHtml=s=>String(s).replace(/<[^>]+>/g,' ').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/&#39;/g,"'").replace(/&quot;/gi,'"').replace(/\s+/g,' ').trim();
+const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const normalizeDate=v=>{if(!v)return null;let s=String(v).trim(),m=s.match(/^(\d{2})\/(\d{2})\/(\d{4})/);if(m)return `${m[3]}-${m[2]}-${m[1]}`;m=s.match(/^(\d{4})-(\d{2})-(\d{2})/);if(m)return `${m[1]}-${m[2]}-${m[3]}`;const d=new Date(s);return Number.isNaN(d.getTime())?null:`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+async function fetchWithTimeout(url,options={},timeoutMs=12000){
+ const controller=new AbortController(),external=options.signal;
+ const abort=()=>controller.abort();
+ if(external){if(external.aborted)controller.abort();else external.addEventListener('abort',abort,{once:true})}
+ const timer=setTimeout(()=>controller.abort(),timeoutMs);
+ try{return await fetch(url,{...options,signal:controller.signal})}
+ catch(e){if(e?.name==='AbortError'&&external?.aborted)throw e;if(e?.name==='AbortError')throw Error('A fonte demorou mais de 12 segundos para responder.');throw e}
+ finally{clearTimeout(timer);if(external)external.removeEventListener('abort',abort)}
+}
+async function directFetch(url,opts={}){
+ let r;
+ try{const token=localStorage.getItem(DADOS_B3_TOKEN_KEY)||'';const headers={Accept:opts.accept||'application/json'};if(token)headers['X-API-Key']=token;r=await fetchWithTimeout(url,{cache:'no-store',signal:opts.signal,headers})}
+ catch(e){if(e?.name==='AbortError')throw e;throw Error(e.message==='Failed to fetch'||e instanceof TypeError?'O navegador não conseguiu acessar Dados B3. Pode ser bloqueio de rede/CORS ou falta de conexão.':e.message||'Falha ao consultar Dados B3.')}
+ const t=await r.text();if(!r.ok)throw Error(`Dados B3 respondeu HTTP ${r.status}${r.status===401?' — esta consulta exige uma chave API válida.':r.status===429?' — limite de consultas atingido.':''}`);return t
+}
+function rowsFromTable(html){const rows=[];const re=/<tr[^>]*>([\s\S]*?)<\/tr>/gi;let m;while((m=re.exec(html))){const cells=[...m[1].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(x=>stripHtml(x[1]));if(cells.length)rows.push(cells)}return rows}
+async function loadDirectFiis(){
+ const k='fiis',hit=directCache.get(k);
+ if(hit&&Date.now()-hit.at<1800000)return hit.rows;
+ let onlineRows=[];
+ try{
+  const html=await directFetch(`${DIRECT_DADOS}/buscar/fiis`,{accept:'text/html'});
+  const seen=new Set();
+  for(const c of rowsFromTable(html)){
+   if(c.length<2)continue;
+   const symbol=c[0].trim().toUpperCase();
+   if(!/^[A-Z0-9.]{4,12}$/.test(symbol)||seen.has(symbol))continue;
+   seen.add(symbol);onlineRows.push({symbol,name:c[1].trim(),offlineFallback:false});
+  }
+  try{localStorage.setItem('rp_fii_search_cache',JSON.stringify(onlineRows))}catch(_){}
+ }catch(e){
+  try{onlineRows=JSON.parse(localStorage.getItem('rp_fii_search_cache')||'[]')}catch(_){onlineRows=[]}
+ }
+ const bySymbol=new Map();
+ for(const row of OFFLINE_FII_CATALOG)bySymbol.set(row.symbol,{...row});
+ for(const row of onlineRows)bySymbol.set(String(row.symbol).toUpperCase(),{...row,offlineFallback:false});
+ const out=[...bySymbol.values()];
+ directCache.set(k,{at:Date.now(),rows:out});
+ return out;
+}
+function editDistance(a,b){
+ a=norm(a);b=norm(b);if(a===b)return 0;if(!a)return b.length;if(!b)return a.length;
+ let prev=Array.from({length:b.length+1},(_,i)=>i);
+ for(let i=1;i<=a.length;i++){const cur=[i];for(let j=1;j<=b.length;j++)cur[j]=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=cur}
+ return prev[b.length];
+}
+async function searchRemote(type,q,signal){
+ const qq=q.trim();if(!qq)return [];
+ let providerRows=[];
+ try{providerRows=await searchBrapiFiis(qq,signal)}catch(e){if(e?.name==='AbortError')throw e;}
+ const rows=[...providerRows,...await loadDirectFiis()],n=norm(qq),bySymbol=new Map();
+ for(const r of rows){const sym=String(r.symbol||'').toUpperCase();if(sym&&!bySymbol.has(sym))bySymbol.set(sym,r)}
+ const ranked=[...bySymbol.values()].map(r=>{
+   const sym=norm(r.symbol),name=norm(r.name);let score=999;
+   if(sym===n)score=0;
+   else if(sym.startsWith(n))score=1;
+   else if(sym.includes(n)||name.includes(n))score=2;
+   else if(n.length>=4&&editDistance(sym,n)<=1)score=3;
+   else if(n.length>=5&&name.split(/\s+/).some(t=>editDistance(t,n)<=1))score=4;
+   return {...r,_score:score};
+ }).filter(r=>r._score<999).sort((a,b)=>a._score-b._score||a.symbol.localeCompare(b.symbol));
+ return ranked.slice(0,20).map(({_score,...r})=>r);
+}
+function dedupeDirect(events){const seen=new Set(),out=[];for(const e of events){const k=[e.symbol,e.paymentDate,e.lastDatePrior,e.exDate,e.rate,e.label].join('|');if(seen.has(k))continue;seen.add(k);out.push(e)}return out.sort((a,b)=>String(b.paymentDate||b.lastDatePrior||b.approvedOn||'').localeCompare(String(a.paymentDate||a.lastDatePrior||a.approvedOn||'')))}
+const BRAPI_TOKEN_KEY='rp_brapi_token';
+function brapiHeaders(){
+ const token=localStorage.getItem(BRAPI_TOKEN_KEY)||'';
+ return token?{Authorization:`Bearer ${token}`}:{};
+}
+async function brapiJson(url,signal){
+ let r;
+ try{r=await fetchWithTimeout(url,{cache:'no-store',signal,headers:{Accept:'application/json',...brapiHeaders()}})}catch(e){if(e?.name==='AbortError')throw e;throw Error(e.message==='Failed to fetch'||e instanceof TypeError?'O navegador não conseguiu acessar brapi.dev. Pode ser bloqueio de rede/CORS ou falta de conexão.':e.message||'Falha ao consultar brapi.dev.')}
+ if(!r.ok)throw Error(`brapi.dev respondeu HTTP ${r.status}${r.status===401?' — token ausente ou inválido.':r.status===403?' — o plano/token não permite este endpoint.':r.status===429?' — limite de consultas atingido.':''}`);
+ return r.json();
+}
+async function searchBrapiFiis(q,signal){
+ const ticker=q.toUpperCase().replace(/\s+/g,'');
+ const param=/^[A-Z]{4}\d{0,2}$/.test(ticker)?`symbols=${encodeURIComponent(ticker)}`:`search=${encodeURIComponent(q.trim())}`;
+ const data=await brapiJson(`https://brapi.dev/api/v2/fii/list?${param}&limit=20`,signal);
+ return (Array.isArray(data.fiis)?data.fiis:[]).map(x=>({symbol:String(x.symbol||'').toUpperCase(),name:x.name||x.symbol,offlineFallback:false,source:'brapi.dev'})).filter(x=>x.symbol);
+}
+async function brapiFiiDiv(sym){
+ const startDate=`${new Date().getFullYear()-5}-01-01`;
+ const data=await brapiJson(`https://brapi.dev/api/v2/fii/dividends?symbols=${encodeURIComponent(sym)}&startDate=${startDate}&sortBy=paymentDate&sortOrder=desc`);
+ const rows=Array.isArray(data.dividends)?data.dividends:[];
+ if(!rows.length)throw Error('brapi.dev não retornou histórico de proventos para este FII.');
+ return dedupeDirect(rows.map(e=>{
+  const reference=/FiiMonthlyReports|monthly.?report|informe mensal/i.test(String(e.remarks||''));
+  return {symbol:sym,label:String(e.label||'RENDIMENTO').toUpperCase(),rate:parseAmount(e.rate),lastDatePrior:e.lastDatePrior||null,paymentDate:e.paymentDate||null,exDate:e.exDate||null,approvedOn:e.approvedOn||null,source:'brapi.dev',sourceNote:e.remarks||'',dateQuality:reference?'reference':'reported'};
+ }).filter(e=>Number.isFinite(e.rate)&&e.rate>=0));
+}
+async function directFiiDiv(sym){
+ // Primary source: Dados B3 documented endpoint (public sample supports MXRF11).
+ try{
+  const raw=await directFetch(`${DIRECT_DADOS}/fiis/${encodeURIComponent(sym)}`,{accept:'application/json'});
+  const data=JSON.parse(raw),recent=Array.isArray(data.proventos_recentes)?data.proventos_recentes:[];
+  if(recent.length){
+   const events=recent.map(p=>({symbol:sym,label:String(p.tipo||'RENDIMENTO').toUpperCase(),rate:parseAmount(p.valor),lastDatePrior:p.data_com||null,paymentDate:p.data_pagamento||null,exDate:null,approvedOn:null,source:'Dados B3 API',dateQuality:'reported'})).filter(e=>Number.isFinite(e.rate)&&e.rate>=0);
+   if(events.length)return dedupeDirect(events);
+  }
+ }catch(_){ }
+ // Secondary source: brapi.dev. More complete access may require the user's API token.
+ try{return await brapiFiiDiv(sym)}catch(_){ }
+ // Last fallback: public history page, when the browser permits HTML access.
+ const html=await directFetch(`${DIRECT_DADOS}/fiis/${encodeURIComponent(sym)}?serie=completa`,{accept:'text/html'});
+ const events=[];
+ for(const c of rowsFromTable(html)){
+  if(c.length<4||!/^\d{4}-\d{2}-\d{2}$/.test(c[0])||!/^\d{4}-\d{2}-\d{2}$/.test(c[1]))continue;
+  const label=norm(c[2]).includes('amort')?'AMORTIZAÇÃO':'RENDIMENTO',rate=parseAmount(c[3]);
+  if(!Number.isFinite(rate))continue;
+  events.push({symbol:sym,label,rate,lastDatePrior:c[0],paymentDate:c[1],exDate:null,approvedOn:null,source:'Dados B3 histórico',dateQuality:'reported'});
+ }
+ return dedupeDirect(events);
+}
+async function dividendsRemote(type,symbols){const list=[...new Set(symbols.map(x=>String(x).trim().toUpperCase()).filter(Boolean))];const out=new Map(list.map(x=>[x,[]])),errors=new Map();await Promise.all(list.map(async sym=>{try{out.set(sym,await directFiiDiv(sym))}catch(e){errors.set(sym,e.message||'Não foi possível consultar a fonte pública.')}}));return {out,errors}}
+
+function parseDate(v){
+  if(!v)return null;
+  const m=String(v).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if(m)return new Date(Number(m[1]),Number(m[2])-1,Number(m[3]));
+  const d=new Date(v); return Number.isNaN(d.getTime())?null:new Date(d.getFullYear(),d.getMonth(),d.getDate());
+}
+function time(v){const d=v instanceof Date?v:parseDate(v);return d?d.getTime():0}
+function br(v){const d=parseDate(v);return d?d.toLocaleDateString('pt-BR'): '—'}
+function paymentDate(e){return e?.paymentDate||null}
+function eventReferenceDate(e){return e?.paymentDate||e?.exDate||e?.lastDatePrior||e?.approvedOn||null}
+function normalizeEvent(e,i){
+  const parsed=parseAmount(e?.rate);
+  const rate=Number.isFinite(parsed)&&parsed>0?parsed:0;
+  return {...e,symbol:i.symbol,rate,total:rate*Math.max(0,Number(i.qty)||0)};
+}
+function eventsFor(i){
+  const raw=[...(S.data[key(i)]?.events||[]),...(Array.isArray(S.manual[key(i)])?S.manual[key(i)]:[])];
+  const seen=new Set(); const out=[];
+  for(const e of raw){
+    // FII amortização devolve capital; não entra como renda.
+    if(i.type==='fii' && String(e?.label||'').toUpperCase().includes('AMORT')) continue;
+    const n=normalizeEvent(e,i);
+    const k=[n.symbol,n.paymentDate,n.lastDatePrior,n.exDate,n.rate,n.label].join('|');
+    if(seen.has(k))continue; seen.add(k); out.push(n);
+  }
+  return out.sort((a,b)=>time(b.paymentDate||eventReferenceDate(b))-time(a.paymentDate||eventReferenceDate(a)));
+}
+function statusFor(d){
+  if(!d)return 'DATA NÃO INFORMADA';
+  const today=new Date();today.setHours(0,0,0,0);const dd=parseDate(d);if(!dd)return 'DATA NÃO INFORMADA';
+  const diff=Math.round((dd-today)/86400000);
+  if(diff<0)return 'PAGO'; if(diff===0)return 'HOJE'; return diff===1?'AMANHÃ':`DAQUI A ${diff} DIAS`;
+}
+function renderMonths(){
+  const names=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  monthEl.innerHTML=names.map((n,i)=>`<option value="${i}" ${i===S.month?'selected':''}>${n.toUpperCase()}</option>`).join('');
+  const years=[];for(let y=new Date().getFullYear()-5;y<=new Date().getFullYear()+1;y++)years.push(y);
+  if(!years.includes(S.year))years.push(S.year);
+  yearEl.innerHTML=years.sort((a,b)=>a-b).map(y=>`<option value="${y}" ${y===S.year?'selected':''}>${y}</option>`).join('');
+}
+function monthLabel(date){return date.toLocaleDateString('pt-BR',{month:'short'}).replace('.','').toUpperCase()}
+function monthKey(date){return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}`}
+function monthlyDividendData(){
+ const totals=new Map();const today=new Date();today.setHours(0,0,0,0);
+ for(const item of S.portfolio){for(const event of eventsFor(item)){
+  const date=parseDate(event.paymentDate);
+  // Only real payment dates in the past count as received. Reference dates and future dates are excluded.
+  if(!date||date>=today||event.dateQuality==='reference')continue;
+  const amount=parseAmount(event.total);
+  // Rendimentos negativos ou inválidos não entram no gráfico de dividendos.
+  if(!Number.isFinite(amount)||amount<=0)continue;
+  const keyMonth=monthKey(date);totals.set(keyMonth,(totals.get(keyMonth)||0)+amount);
+ }}
+ const current=new Date(today.getFullYear(),today.getMonth(),1),period=Number(document.getElementById('evolutionPeriod')?.value||12),months=[];
+ for(let i=period-1;i>=0;i--){const d=new Date(current.getFullYear(),current.getMonth()-i,1),k=monthKey(d);months.push({key:k,label:monthLabel(d),fullLabel:d.toLocaleDateString('pt-BR',{month:'long',year:'numeric'}),value:totals.get(k)||0,date:d})}
+ return {months,totals,today,current};
+}
+function renderEvolution(){
+ const root=document.getElementById('dividendEvolution');if(!root)return;
+ const now=new Date(),year=now.getFullYear(),month=now.getMonth(),today=new Date(now);today.setHours(0,0,0,0);
+ const label=now.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+ document.getElementById('dividendMonthLabel').textContent=label.charAt(0).toUpperCase()+label.slice(1);
+ const rows=[];
+ for(const item of S.portfolio){
+  const events=eventsFor(item).filter(e=>{
+   const d=parseDate(e.paymentDate);
+   return d&&e.dateQuality!=='reference'&&d.getFullYear()===year&&d.getMonth()===month&&Number.isFinite(parseAmount(e.total))&&parseAmount(e.total)>0;
+  });
+  if(!events.length)continue;
+  events.sort((a,b)=>time(a.paymentDate)-time(b.paymentDate));
+  // Prefer the nearest unpaid payment; if all current-month events have passed, show the latest one as received.
+  const next=events.find(e=>parseDate(e.paymentDate)>=today);
+  const event=next||events[events.length-1];
+  rows.push({item,event,received:!next&&parseDate(event.paymentDate)<today});
+ }
+ const total=rows.reduce((sum,r)=>sum+(Number(r.event.total)||0),0);
+ document.getElementById('evolutionCurrent').textContent=money(total);
+ renderDividendChart();
+}
+
+
+function renderDividendChart(){
+ const chart=document.getElementById('dividendChart');if(!chart)return;
+ if(!S.portfolio.length){chart.innerHTML='<div class="evolution-empty">Cadastre um fundo para iniciar o gráfico.</div>';return}
+ const registered=S.portfolio.map(i=>({item:i,date:parseDate(i.registeredAt)})).filter(x=>x.date).sort((a,b)=>a.date-b.date);
+ if(!registered.length){chart.innerHTML='<div class="evolution-empty">O gráfico começará quando houver ativos cadastrados.</div>';return}
+ const first=new Date(registered[0].date.getFullYear(),registered[0].date.getMonth(),1),now=new Date(),current=new Date(now.getFullYear(),now.getMonth(),1),months=[];
+ let cursor=new Date(first);while(cursor<=current&&months.length<60){months.push({key:monthKey(cursor),label:monthLabel(cursor),fullLabel:cursor.toLocaleDateString('pt-BR',{month:'long',year:'numeric'}),value:0});cursor=new Date(cursor.getFullYear(),cursor.getMonth()+1,1)}
+ const lookup=new Map(months.map(m=>[m.key,m]));const today=new Date();today.setHours(0,0,0,0);
+ for(const item of S.portfolio){const reg=parseDate(item.registeredAt);if(!reg)continue;const regMonth=new Date(reg.getFullYear(),reg.getMonth(),1);for(const event of eventsFor(item)){
+  const d=parseDate(event.paymentDate);if(!d||d>=today||event.dateQuality==='reference'||d<regMonth)continue;
+  const amount=parseAmount(event.total);if(!Number.isFinite(amount)||amount<=0)continue;const m=lookup.get(monthKey(d));if(m)m.value+=amount;
+ }}
+ if(!months.length){chart.innerHTML='<div class="evolution-empty">Ainda não há meses para exibir.</div>';return}
+ const max=Math.max(0.01,...months.map(m=>m.value)),w=340,h=178,l=8,r=8,t=14,b=31,ph=h-t-b,pw=w-l-r,step=pw/months.length;
+ const bars=months.map((m,i)=>{const bh=m.value>0?Math.max(3,m.value/max*(ph-8)):0,x=l+i*step+step*.18,y=t+ph-bh;return `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${Math.max(2,step*.64).toFixed(2)}" height="${bh.toFixed(2)}" rx="2" fill="#e4c36d" opacity="${m.value?'.95':'.22'}"><title>${esc(m.fullLabel)}: ${esc(money(m.value))} recebidos</title></rect><text x="${(l+i*step+step/2).toFixed(2)}" y="${h-9}" text-anchor="middle" font-size="${months.length>18?7:9}" fill="#b7b0a1">${esc(m.label)}</text>`}).join('');
+ chart.innerHTML=`<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><line x1="${l}" y1="${t+ph}" x2="${w-r}" y2="${t+ph}" stroke="#494333"/><line x1="${l}" y1="${t+ph/2}" x2="${w-r}" y2="${t+ph/2}" stroke="#34312a" stroke-dasharray="3 4"/><text x="${l}" y="10" font-size="9" fill="#b7b0a1">${esc(money(max))}</text>${bars}</svg>`;
+ 
+}
+
+function quotePriceFromObject(obj,depth=0){
+ if(!obj||typeof obj!=='object'||depth>7)return NaN;
+ // APIs can return prices directly, inside results[], or under results[].data.
+ const keys=['regularMarketPrice','price','lastPrice','currentPrice','cotacao','ultimo_preco','ultimoPreco','preco','preco_atual','valor_cota','valorCota','cotacao_atual','close','closingPrice','last'];
+ for(const k of keys){const v=obj[k];if(v!==null&&v!==undefined&&v!==''){const n=parseAmount(v);if(Number.isFinite(n)&&n>0)return n}}
+ for(const [k,v] of Object.entries(obj)){
+  if(!v||typeof v!=='object')continue;
+  // Do not traverse unrelated metadata deeply; these are common quote payload containers.
+  if(['results','data','quote','cotacao','indicadores','cadastro','marketData','priceInfo','regularMarket','result'].includes(k)){
+   if(Array.isArray(v)){for(const x of v){const n=quotePriceFromObject(x,depth+1);if(Number.isFinite(n)&&n>0)return n}}
+   else {const n=quotePriceFromObject(v,depth+1);if(Number.isFinite(n)&&n>0)return n}
+  }
+ }
+ return NaN;
+}
+function readCurrentValue(item){
+ const cached=S.data[key(item)]||{};
+ const qty=parseAmount(item.qty);
+ if(!(qty>0))return NaN;
+ // quotePrice is always a unit price; total market value fields are only used as explicit totals.
+ const unitCandidates=[cached.quotePrice,cached.quote?.regularMarketPrice,cached.quoteData?.regularMarketPrice,item.currentPrice,item.lastPrice,item.price,item.cotacao,item.quotePrice,cached.currentPrice,cached.lastPrice,cached.price,cached.cotacao,cached.ultimo_preco,cached.ultimoPreco,cached.regularMarketPrice];
+ for(const v of unitCandidates){const n=parseAmount(v);if(Number.isFinite(n)&&n>0)return n*qty}
+ const quote=quotePriceFromObject(cached.quote||cached.quoteData||cached.marketQuote);
+ if(Number.isFinite(quote)&&quote>0)return quote*qty;
+ const explicitTotals=[item.marketValue,item.currentValue,item.valorAtual,item.patrimonyValue,cached.marketValue,cached.currentValue,cached.valorAtual,cached.patrimonyValue];
+ for(const v of explicitTotals){const n=parseAmount(v);if(Number.isFinite(n)&&n>0)return n}
+ return NaN;
+}
+async function fetchFiiQuote(sym){
+ sym=String(sym||'').trim().toUpperCase();
+ if(!/^[A-Z]{4}11$/.test(sym))throw Error(`Código ${sym||'vazio'} inválido para FII. Confira o ticker cadastrado (ex.: HGLG11).`);
+ const errors=[];
+ // 1) Cotação básica: preço de mercado, sem depender de indicadores fundamentalistas.
+ try{
+  const data=await brapiJson(`https://brapi.dev/api/quote/${encodeURIComponent(sym)}`);
+  const rows=Array.isArray(data.results)?data.results:[];
+  const row=rows.find(x=>String(x.symbol||'').toUpperCase()===sym||String(x.requestedSymbol||'').toUpperCase()===sym);
+  if(row){const price=quotePriceFromObject(row);if(Number.isFinite(price)&&price>0)return {price,source:'brapi.dev',updatedAt:new Date().toISOString()};errors.push('brapi.dev encontrou '+sym+', mas não trouxe preço atual válido')}
+  else errors.push('brapi.dev não retornou o ticker exato '+sym+'; confira se o código está correto e se o plano cobre esse ativo');
+ }catch(e){errors.push(`brapi.dev cotação: ${e.message||'indisponível'}`)}
+ // 2) Fallback de indicadores para os FIIs cobertos pelo acesso público, lendo apenas preço de mercado.
+ try{
+  const data=await brapiJson(`https://brapi.dev/api/v2/fii/indicators?symbols=${encodeURIComponent(sym)}`);
+  const rows=Array.isArray(data.indicators)?data.indicators:Array.isArray(data.results)?data.results:Array.isArray(data.fiis)?data.fiis:[];
+  const row=rows.find(x=>String(x.symbol||x.requestedSymbol||'').toUpperCase()===sym);
+  if(row){const price=quotePriceFromObject(row);if(Number.isFinite(price)&&price>0)return {price,source:'brapi.dev indicadores',updatedAt:new Date().toISOString()};errors.push('indicadores brapi.dev retornaram '+sym+', mas sem preço de mercado válido')}
+  else errors.push('indicadores brapi.dev não retornaram '+sym);
+ }catch(e){errors.push(`brapi.dev indicadores: ${e.message||'indisponível'}`)}
+ // 3) Última alternativa: Dados B3.
+ try{
+  const raw=await directFetch(`${DIRECT_DADOS}/fiis/${encodeURIComponent(sym)}`,{accept:'application/json'});
+  const data=JSON.parse(raw);const price=quotePriceFromObject(data);
+  if(Number.isFinite(price)&&price>0)return {price,source:'Dados B3',updatedAt:new Date().toISOString()};
+  errors.push('Dados B3 respondeu, mas não trouxe preço de mercado identificável');
+ }catch(e){errors.push(`Dados B3: ${e.message||'indisponível'}`)}
+ throw Error(errors.join(' · '));
+}
+// Reutiliza consultas simultâneas do mesmo ticker para evitar chamadas duplicadas à API.
+const quoteRequestsInFlight=new Map();
+function fetchFiiQuoteDeduplicated(sym){
+ const ticker=String(sym||'').trim().toUpperCase();
+ if(quoteRequestsInFlight.has(ticker))return quoteRequestsInFlight.get(ticker);
+ const request=fetchFiiQuote(ticker).finally(()=>quoteRequestsInFlight.delete(ticker));
+ quoteRequestsInFlight.set(ticker,request);
+ return request;
+}
+async function refreshPortfolioQuotes(force=false){
+ if(!navigator.onLine||!S.portfolio.length)return;
+ const tasks=S.portfolio.map(async item=>{
+  const k=key(item),prev=S.data[k]||{};
+  const age=Date.now()-Date.parse(prev.quoteUpdatedAt||'');
+  if(!force&&Number(prev.quotePrice)>0&&Number.isFinite(age)&&age<15*60*1000)return;
+  try{const q=await fetchFiiQuoteDeduplicated(item.symbol);S.data[k]={...prev,quotePrice:q.price,quoteSource:q.source,quoteUpdatedAt:q.updatedAt,quoteError:null};}
+  catch(e){S.data[k]={...prev,quoteError:e.message||'Cotação indisponível'};}
+ });
+ await Promise.all(tasks);saveRemoteCache();
+ try{localStorage.setItem('rp_last_quote_update',new Date().toLocaleString('pt-BR'))}catch(_){}
+ render();
+}
+function render(){
+  renderMonths();
+  renderEvolution();
+  // Calcula os eventos de cada fundo uma única vez por renderização.
+  const eventsByKey=new Map(S.portfolio.map(i=>[key(i),eventsFor(i)]));
+  const today=new Date();today.setHours(0,0,0,0);
+  // Um cartão por fundo: exibe somente um pagamento do mês selecionado.
+  // Se já foi pago, usa verde; se ainda vai acontecer, usa laranja e a contagem regressiva.
+  const displayFunds=S.portfolio.map(i=>{
+    const ev=eventsByKey.get(key(i))||[];
+    const inMonth=ev.filter(e=>e.dateQuality!=='reference'&&parseDate(e.paymentDate)&&parseDate(e.paymentDate).getFullYear()===S.year&&parseDate(e.paymentDate).getMonth()===S.month);
+    const next=inMonth.filter(e=>parseDate(e.paymentDate)>=today).sort((a,b)=>time(a.paymentDate)-time(b.paymentDate))[0];
+    const paid=inMonth.filter(e=>parseDate(e.paymentDate)<today).sort((a,b)=>time(b.paymentDate)-time(a.paymentDate))[0];
+    return {item:i,event:next||paid,received:!next&&!!paid};
+  }).filter(x=>x.event);
+  totalEl.textContent=money(displayFunds.reduce((sum,x)=>sum+x.event.total,0));
+  eventsEl.innerHTML=displayFunds.length?displayFunds.map(({item,event,received})=>`<article class="card" role="button" tabindex="0" aria-label="Ver detalhes de ${esc(item.symbol)}" onclick="details('${item.type}','${esc(item.symbol)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();details('${item.type}','${esc(item.symbol)}')}"><div class="cardmain"><div style="flex:1;min-width:0"><div class="symbol">${esc(item.symbol)}</div><div class="muted">Rendimento: ${money(event.rate)} · ${item.qty} cotas</div><span class="badge ${received?'today':'future'}">${received?'RECEBIDO':statusFor(event.paymentDate)} · ${br(event.paymentDate)}</span></div><div class="amount" style="color:${received?'var(--green)':'var(--orange)'}">${money(event.total)}</div></div></article>`).join(''):'<div class="empty">Nenhum pagamento deste mês encontrado para os fundos cadastrados.</div>';
+  portfolioEl.innerHTML=S.portfolio.length?S.portfolio.map(i=>`<div class="pitem"><div style="flex:1;min-width:0"><b>${esc(i.symbol)}</b><div class="muted">${esc(i.name||'Fundo imobiliário')} · ${i.qty} cotas</div></div><div class="pactions"><button type="button" class="pbtn delete" data-delete="${esc(i.type)}|${esc(i.symbol)}">Excluir</button></div></div>`).join(''):'<div class="empty">Nenhum fundo imobiliário cadastrado.</div>';
+portfolioEl.querySelectorAll('[data-delete]').forEach(btn=>btn.onclick=e=>{e.stopPropagation();const [type,sym]=btn.dataset.delete.split('|');removeAsset(type,sym)});
+}
+function removeAsset(type,sym){
+  const item=S.portfolio.find(x=>x.type===type&&x.symbol===sym);
+  if(!item)return;
+  S.portfolio=S.portfolio.filter(x=>!(x.type===type&&x.symbol===sym));
+  delete S.data[key(item)];
+  save();
+  render();
+  statusEl.textContent=`${sym} foi excluído da carteira.`;
+}
+let lastRefreshAttempt=0;
+async function refresh(force=false){
+ const now=Date.now();if(!force&&lastRefreshAttempt&&now-lastRefreshAttempt<15*60*1000)return;
+ lastRefreshAttempt=now;const seq=++S.requestSeq;
+ if(!navigator.onLine){statusEl.textContent='Sem internet. Exibindo os dados previamente salvos; a atualização online está pausada.';render();return}
+ if(!S.portfolio.length){statusEl.textContent='Adicione um fundo para começar.';render();return}
+ statusEl.textContent='Atualizando proventos nas fontes online...';
+ const symbols=[...new Set(S.portfolio.map(i=>i.symbol))];let result;
+ try{result=await dividendsRemote('fii',symbols)}catch(e){result={out:new Map(),errors:new Map(symbols.map(sym=>[sym,e.message||'Erro na consulta']))}}
+ if(seq!==S.requestSeq)return;
+ for(const i of S.portfolio){const sym=i.symbol.toUpperCase(),err=result.errors.get(sym);
+  if(err){const previous=S.data[key(i)]||{};S.data[key(i)]={...previous,ok:false,error:err,events:Array.isArray(previous.events)?previous.events:[]}}
+  else{const previous=S.data[key(i)]||{},events=result.out.get(sym)||[];S.data[key(i)]={...previous,ok:true,updatedAt:new Date().toISOString(),source:[...new Set(events.map(e=>e.source).filter(Boolean))].join(' + ')||'Fontes online',events}}
+ }
+ saveRemoteCache();
+ try{localStorage.setItem('rp_last_updated',new Date().toLocaleString('pt-BR'))}catch(_){}
+ updateSettingsStatus();
+ const bad=S.portfolio.filter(i=>S.data[key(i)]?.ok===false),referenceOnly=S.portfolio.filter(i=>S.data[key(i)]?.ok===true&&eventsFor(i).length>0&&eventsFor(i).every(e=>e.dateQuality==='reference')),empty=S.portfolio.filter(i=>S.data[key(i)]?.ok===true&&eventsFor(i).length===0);
+ statusEl.textContent=bad.length?`${bad.length} fundo(s) sem atualização online. Os dados salvos foram preservados.`:referenceOnly.length?`Consulta concluída; ${referenceOnly.length} fundo(s) têm apenas datas de referência, não pagamentos confirmados.`:empty.length?`Consulta concluída. ${empty.length} fundo(s) sem proventos retornados pela fonte.`:'Proventos consultados. Confira a fonte e a data da última atualização nos detalhes.';
+ render();
+ await refreshPortfolioQuotes(!!force);
+}
+window.details=(type,sym)=>{const i=S.portfolio.find(x=>x.type===type&&x.symbol===sym);if(!i)return;const cacheInfo=S.data[key(i)]||{},err=cacheInfo.error,ev=eventsFor(i).sort((a,b)=>time(b.paymentDate||eventReferenceDate(b))-time(a.paymentDate||eventReferenceDate(a))),today=new Date();today.setHours(0,0,0,0);const paid=ev.filter(x=>{const d=parseDate(paymentDate(x));return x.dateQuality!=='reference'&&d&&d<today}).sort((a,b)=>time(paymentDate(b))-time(paymentDate(a))),future=ev.filter(x=>{const d=parseDate(paymentDate(x));return x.dateQuality!=='reference'&&d&&d>=today}).sort((a,b)=>time(paymentDate(a))-time(paymentDate(b))),last=paid[0],next=future[0];detailBodyEl.innerHTML=`<h2>${esc(sym)}</h2><div class="muted" style="margin-bottom:10px">${esc(i.name||sym)}</div>${err?`<div class="error">${esc(err)}</div>`:''}${ev.some(x=>x.dateQuality==='reference')?'<div class="hint">A fonte também retornou registros de informes mensais cuja data não é uma data confirmada de pagamento. Eles não são tratados como proventos pagos ou futuros.</div>':''}<div class="muted">${i.type==='fii'?'Fundo imobiliário':i.type==='stock'?'Ação':'Investimento internacional'} · ${i.qty} ${i.type==='fii'?'cotas':i.type==='stock'?'ações':'unidades'}</div>${next?`<div class="amount" style="font-size:34px;text-align:left;margin:18px 0">${money(next.total)}</div><div class="metrics"><div class="metric">Próximo provento<b>${money(next.rate)} por ${i.type==='fii'?'cota':i.type==='stock'?'ação':'unidade'}</b></div><div class="metric">Pagamento<b>${br(next.paymentDate)}</b></div></div><div class="metrics" style="margin-top:9px"><div class="metric">Data-com<b>${br(next.lastDatePrior)}</b></div><div class="metric">Data ex<b>${br(next.exDate)}</b></div></div>`:'<div class="empty" style="margin-top:15px">Nenhum próximo provento disponível.</div>'}${last?`<div class="metrics" style="margin-top:9px"><div class="metric">Último provento<b>${money(last.total)}</b></div><div class="metric">Pago em<b>${br(last.paymentDate)}</b></div></div>`:''}`;detailBodyEl.insertAdjacentHTML('beforeend',`<p><a href="https://statusinvest.com.br/fundos-imobiliarios/${encodeURIComponent(sym.toLowerCase())}" target="_blank" rel="noopener">Abrir análise do fundo no Status Invest ↗</a></p><p class="hint">Fonte de proventos: ${esc(cacheInfo.source||'fontes online disponíveis')}. ${cacheInfo.updatedAt?'Última consulta: '+esc(new Date(cacheInfo.updatedAt).toLocaleString('pt-BR'))+'.':'Data da consulta anterior não registrada.'} Verifique datas e valores na fonte original.</p>`);detailEl.showModal()}
+
+let timer=0,searchSeq=0;
+async function searchAssets(q,seq){
+ q=String(q||'').trim();
+ if(q.length<2){resultsEl.innerHTML='';return}
+ if(activeSearchController)activeSearchController.abort();
+ activeSearchController=new AbortController();
+ const controller=activeSearchController;
+ resultsEl.innerHTML='<div class="muted">Pesquisando fundos...</div>';
+ try{
+  const rows=await searchRemote('fii',q,controller.signal);
+  if(seq!==searchSeq)return;
+  const unique=[],seen=new Set();
+  for(const x of rows){const sym=symbolOf(x);if(!sym||seen.has(sym))continue;seen.add(sym);unique.push(x)}
+  if(!unique.length){
+   const ticker=q.toUpperCase().replace(/\s+/g,'');
+   const manual=/^[A-Z]{4}11$/.test(ticker);
+   resultsEl.innerHTML=`<div class="empty">Nenhum resultado confirmado pelas fontes online. Confira a conexão ou tente outro nome/código.</div>${manual?`<button type="button" class="result" id="manualTicker"><b>＋ Cadastrar ${esc(ticker)} manualmente</b><small>Não foi possível validar esse ticker online. Confirme antes de salvar.</small></button>`:''}`;
+   const manualBtn=document.getElementById('manualTicker');
+   if(manualBtn)manualBtn.onclick=()=>{S.selected=ticker;S.selectedName=ticker+' (cadastro manual não validado)';searchEl.value=ticker;chosenEl.dataset.validated='1';chosenEl.innerHTML=`<div class="selected">Cadastro manual: <b>${esc(ticker)}</b><br><small>O ticker não foi validado por uma fonte online.</small></div>`;resultsEl.innerHTML=''};
+   return;
+  }
+  resultsEl.innerHTML=unique.slice(0,15).map(x=>`<button type="button" class="result" data-s="${esc(symbolOf(x))}" data-n="${esc(nameOf(x))}"><b>${esc(symbolOf(x))}</b><small>${esc(nameOf(x))}${x.offlineFallback?' · catálogo offline':x.source?' · '+esc(x.source):''}</small></button>`).join('');
+  resultsEl.querySelectorAll('.result').forEach(b=>b.onclick=()=>{S.selected=b.dataset.s;S.selectedName=b.dataset.n;searchEl.value=b.dataset.s;chosenEl.dataset.validated='1';chosenEl.innerHTML=`<div class="selected">Selecionado: <b>${esc(b.dataset.n)}</b> · ${esc(b.dataset.s)}</div>`;resultsEl.innerHTML='';qtyEl.focus()});
+ }catch(e){
+  if(seq!==searchSeq||e?.name==='AbortError')return;
+  resultsEl.innerHTML=`<div class="error">A pesquisa online falhou: ${esc(e.message||'erro desconhecido')}. O catálogo local ainda pode conter alguns FIIs conhecidos.</div>`;
+ }
+}
+function resetAdd(){S.selected=null;S.selectedName='';delete chosenEl.dataset.validated;searchSeq++;if(activeSearchController)activeSearchController.abort();activeSearchController=null;searchEl.value='';qtyEl.value='';chosenEl.textContent='';resultsEl.innerHTML='';}document.getElementById('add').onclick=()=>{resetAdd();dlgEl.showModal();setTimeout(()=>searchEl.focus(),100)};document.getElementById('cancel').onclick=()=>{resetAdd();dlgEl.close();showPage('portfolio')};document.getElementById('close').onclick=()=>detailEl.close();document.getElementById('refresh').onclick=()=>refresh(true);
+const backupFileEl=document.getElementById('backupFile');
+document.getElementById('exportBackup').onclick=()=>{
+ const payload={app:'Antonio Lucas — FIIs & Proventos',schemaVersion:1,exportedAt:new Date().toISOString(),portfolio:S.portfolio,legacyAssets,remoteData:S.data,manualEvents:S.manual,searchCache:(()=>{try{return JSON.parse(localStorage.getItem('rp_fii_search_cache')||'[]')}catch(_){return []}})()};
+ const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download=`antonio-lucas-backup-${new Date().toISOString().slice(0,10)}.json`;
+ document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ statusEl.textContent='Backup exportado. Guarde o arquivo em local seguro.';
+};
+document.getElementById('importBackup').onclick=()=>backupFileEl.click();
+backupFileEl.onchange=async()=>{
+ const file=backupFileEl.files?.[0];if(!file)return;
+ try{
+  const payload=JSON.parse(await file.text());
+  if(!payload||typeof payload!=='object'||!Array.isArray(payload.portfolio)||!payload.manualEvents||typeof payload.manualEvents!=='object')throw Error('Formato de backup inválido.');
+  if(!confirm('Importar este backup e substituir os dados locais atuais? Exporte um backup atual antes se quiser preservá-los.'))return;
+  const portfolio=payload.portfolio.filter(x=>x&&typeof x.symbol==='string'&&Number(x.qty)>0).map(x=>({...x,symbol:x.symbol.trim().toUpperCase(),type:'fii'}));
+  S.portfolio=portfolio.filter((x,i,a)=>i===a.findIndex(y=>y.symbol===x.symbol));
+  S.data=payload.remoteData&&typeof payload.remoteData==='object'?payload.remoteData:{};
+  S.manual=payload.manualEvents;
+  const old=Array.isArray(payload.legacyAssets)?payload.legacyAssets:[];
+  try{
+   localStorage.setItem('rp_clean',JSON.stringify([...S.portfolio,...old]));
+   localStorage.setItem('rp_manual_events',JSON.stringify(S.manual));
+   localStorage.setItem('rp_remote_cache',JSON.stringify(S.data));
+   if(Array.isArray(payload.searchCache))localStorage.setItem('rp_fii_search_cache',JSON.stringify(payload.searchCache));
+  }catch(_){throw Error('O armazenamento do navegador recusou a importação. Libere espaço e tente novamente.')}
+  render();statusEl.textContent=`Backup importado: ${S.portfolio.length} fundo(s) restaurado(s).`;
+ }catch(e){alert(`Não foi possível importar o backup: ${e.message||'arquivo inválido'}`)}
+ finally{backupFileEl.value=''}
+};
+document.getElementById('testConnection').onclick=async()=>{
+ const report=document.getElementById('connectionReport');
+ const btn=document.getElementById('testConnection');btn.disabled=true;report.innerHTML='Testando acesso às fontes...';
+ const checks=[];
+ if(!navigator.onLine){report.innerHTML='<div class="error">O navegador informa que está sem internet. Reconecte e tente novamente.</div>';btn.disabled=false;return}
+ const tests=[
+  {name:'Dados B3',run:async()=>{const raw=await directFetch('https://dadosb3.com/fiis/MXRF11',{accept:'application/json'});const data=JSON.parse(raw);if(!data||typeof data!=='object')throw Error('resposta inesperada');return 'respondeu; dados do fundo recebidos'}},
+  {name:'brapi.dev — cadastro de FII',run:async()=>{const data=await brapiJson('https://brapi.dev/api/v2/fii/list?symbols=MXRF11&limit=1');if(!Array.isArray(data.fiis))throw Error('resposta sem lista de FIIs');return data.fiis.some(x=>String(x.symbol||'').toUpperCase()==='MXRF11')?'respondeu; MXRF11 encontrado':'respondeu, mas MXRF11 não veio na resposta'}},
+  {name:'brapi.dev — cotação',run:async()=>{const data=await brapiJson('https://brapi.dev/api/quote/MXRF11');const rows=Array.isArray(data.results)?data.results:[];const row=rows.find(x=>String(x.symbol||'').toUpperCase()==='MXRF11'||String(x.requestedSymbol||'').toUpperCase()==='MXRF11');if(!row)throw Error('endpoint respondeu, mas não retornou MXRF11');const price=quotePriceFromObject(row);if(!(Number.isFinite(price)&&price>0))throw Error('MXRF11 encontrado, mas sem preço válido na resposta');return `MXRF11 com preço ${money(price)}`}}
+ ];
+ for(const test of tests){try{const detail=await test.run();checks.push(`<div>✅ <b>${esc(test.name)}:</b> ${esc(detail)}</div>`)}catch(e){checks.push(`<div>❌ <b>${esc(test.name)}:</b> ${esc(e.message||'falha de conexão')}</div>`)}}
+ report.innerHTML=checks.join('')+'<p>Este teste verifica se o navegador consegue acessar os endpoints. Não comprova que todos os FIIs ou todo o histórico de dividendos estão disponíveis no plano atual.</p>';
+ btn.disabled=false;
+};
+document.getElementById('configureDadosB3').onclick=()=>{
+ const existing=localStorage.getItem(DADOS_B3_TOKEN_KEY)||'';
+ const value=prompt('Chave gratuita da Dados B3 (até 200 consultas por dia). Deixe em branco para remover a chave. A chave fica neste navegador e é enviada somente à Dados B3.',existing);
+ if(value===null)return;
+ try{if(value.trim())localStorage.setItem(DADOS_B3_TOKEN_KEY,value.trim());else localStorage.removeItem(DADOS_B3_TOKEN_KEY)}catch(_){alert('Não foi possível salvar a chave neste navegador.');return}
+ directCache.clear();statusEl.textContent=value.trim()?'Chave Dados B3 configurada. Atualizando proventos...':'Chave Dados B3 removida. Atualizando com acesso público e fontes alternativas.';
+ refresh(true);
+};
+document.getElementById('configureSource').onclick=()=>{
+ const existing=localStorage.getItem(BRAPI_TOKEN_KEY)||'';
+ const value=prompt('Token da brapi.dev (opcional). Deixe em branco para remover o token. Consulte https://brapi.dev/dashboard para obter uma chave.',existing);
+ if(value===null)return;
+ try{if(value.trim())localStorage.setItem(BRAPI_TOKEN_KEY,value.trim());else localStorage.removeItem(BRAPI_TOKEN_KEY)}catch(_){alert('Não foi possível salvar a configuração neste navegador.');return}
+ directCache.clear();statusEl.textContent=value.trim()?'Token configurado neste aparelho. Atualizando dados...':'Token removido. Usando apenas acesso público.';
+ refresh(true);
+};
+document.getElementById('clearPortfolio').onclick=()=>{
+  if(!S.portfolio.length){statusEl.textContent='A carteira já está vazia.';return}
+  if(!confirm('Excluir todos os ativos desta carteira?'))return;
+  S.portfolio=[];S.data={};save();render();statusEl.textContent='Carteira limpa.';
+};monthEl.onchange=e=>{S.month=Number(e.target.value);render()};yearEl.onchange=e=>{S.year=Number(e.target.value);render()};
+searchEl.oninput=e=>{const value=e.target.value;S.selected=null;S.selectedName='';delete chosenEl.dataset.validated;chosenEl.textContent='';clearTimeout(timer);const seq=++searchSeq;timer=setTimeout(()=>{if(seq===searchSeq)searchAssets(value,seq)},300)};
+document.getElementById('save').onclick=async()=>{const sym=String(S.selected||'').trim().toUpperCase(),qty=parseAmount(qtyEl.value);if(!sym||!(qty>0)){chosenEl.innerHTML='<div class="error">Pesquise e selecione um ativo antes de salvar.</div>';return}if(chosenEl.dataset.validated!=='1'){chosenEl.innerHTML='<div class="error">Selecione um resultado da pesquisa antes de salvar.</div>';return}const ex=S.portfolio.find(x=>x.symbol===sym&&x.type==='fii');if(ex){ex.qty=qty;if(S.selectedName)ex.name=S.selectedName;}else S.portfolio.push({symbol:sym,name:S.selectedName||sym,qty,type:'fii',registeredAt:new Date().toISOString().slice(0,10)});S.portfolio=S.portfolio.filter((x,i,a)=>x.type==='fii'&&i===a.findIndex(y=>y.type==='fii'&&y.symbol===x.symbol));const persisted=save();if(!persisted){chosenEl.innerHTML='<div class=\"error\">Não foi possível salvar a carteira neste navegador.</div>';return}delete S.data[key({symbol:sym,type:S.type})];const saved=S.portfolio.find(x=>x.symbol===sym&&x.type===S.type);if(saved)await refresh();else render();resetAdd();dlgEl.close();showPage('portfolio')};
+function updateSettingsStatus(){const el=document.getElementById('settingsStatus');if(!el)return;const online=navigator.onLine;const brapi=!!localStorage.getItem(BRAPI_TOKEN_KEY);const b3=!!localStorage.getItem(DADOS_B3_TOKEN_KEY);el.innerHTML=`<div>${online?'🟢':'🔴'} Internet do aparelho: <b>${online?'conectado':'offline'}</b></div><div>brapi.dev: <b>${brapi?'token configurado':'sem token'}</b></div><div>Dados B3: <b>${b3?'chave configurada':'sem chave'}</b></div><div>Última atualização: <b>${esc(localStorage.getItem('rp_last_updated')||'ainda não registrada')}</b></div>`}
+function showPage(tab){document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));document.getElementById('proventos-hero').hidden=tab!=='home';document.getElementById('page-home').hidden=tab!=='home';document.getElementById('page-portfolio').hidden=tab!=='portfolio';document.getElementById('page-evolution').hidden=tab!=='evolution';document.getElementById('page-add').hidden=tab!=='add';document.getElementById('page-settings').hidden=tab!=='settings';if(tab==='evolution'){renderEvolution()}if(tab==='settings')updateSettingsStatus();if(tab==='add'&&!dlgEl.open){resetAdd();dlgEl.showModal();setTimeout(()=>searchEl.focus(),100)}window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('.nav').forEach(n=>n.onclick=()=>showPage(n.dataset.tab));document.getElementById('openSettings').onclick=()=>showPage('settings');
+// Uma única rotina coordena a atualização de proventos e, ao final, das cotações.
+// Evita disparar a mesma atualização em paralelo na inicialização, retorno ao app ou timer.
+render();refresh();
+window.addEventListener('online',()=>{directCache.clear();updateSettingsStatus();refresh(true)});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refresh()});
+window.addEventListener('focus',()=>refresh());
+setInterval(()=>{if(document.visibilityState==='visible')refresh()},15*60*1000);
+window.addEventListener('offline',()=>{statusEl.textContent='Sem internet. Carteira e dados previamente consultados disponíveis quando salvos.';updateSettingsStatus();render()});
+
+</script>
+<script id="pwa-install-and-offline">
+let installPromptEvent=null;
+const installButton=document.getElementById('installApp');
+const installHelp=document.getElementById('installHelp');
+function setInstallHelp(message){if(installHelp)installHelp.textContent=message}
+window.addEventListener('beforeinstallprompt',ev=>{ev.preventDefault();installPromptEvent=ev;installButton.disabled=false;setInstallHelp('Instalação disponível neste navegador. Toque em “Instalar aplicativo” e confirme.')});
+installButton.addEventListener('click',async()=>{
+ if(installPromptEvent){
+  try{installPromptEvent.prompt();const choice=await installPromptEvent.userChoice;if(choice&&choice.outcome==='accepted')setInstallHelp('Pedido de instalação confirmado pelo navegador.');else setInstallHelp('Instalação cancelada. Você pode tentar novamente quando quiser.');}
+  catch(_){setInstallHelp('O navegador não conseguiu iniciar a instalação. Abra o menu do navegador e procure “Instalar aplicativo”.')}
+  installPromptEvent=null;return;
+ }
+ if(location.protocol==='content:'||location.protocol==='file:'){
+  setInstallHelp('Este arquivo foi aberto diretamente do aparelho. Nesse modo (content:// ou file://), o navegador não permite a instalação PWA nem o service worker. Primeiro será necessário publicar os arquivos juntos em um endereço HTTPS.');return;
+ }
+ if(location.protocol!=='https:'&&location.hostname!=='localhost'&&location.hostname!=='127.0.0.1'){
+  setInstallHelp('A instalação PWA exige um endereço HTTPS. Abra o aplicativo pelo endereço seguro depois que ele for publicado.');return;
+ }
+ if(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches){setInstallHelp('O aplicativo parece já estar instalado neste aparelho.');return;}
+ setInstallHelp('A instalação automática não está disponível neste momento. No Chrome para Android, abra o menu ⋮ e procure “Instalar aplicativo” ou “Adicionar à tela inicial”. Se essa opção não aparecer, confirme que o site está em HTTPS e que o navegador permite instalação.');
+});
+window.addEventListener('appinstalled',()=>{setInstallHelp('Aplicativo instalado neste aparelho.');if(statusEl)statusEl.textContent='Aplicativo instalado.'});
+if('serviceWorker' in navigator && location.protocol==='https:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(()=>setInstallHelp('Site seguro e suporte offline ativado. A instalação aparecerá quando o navegador confirmar os requisitos.')).catch(()=>setInstallHelp('O site está em HTTPS, mas não foi possível ativar o suporte offline. Confira os arquivos publicados.')))}
+if(location.protocol==='content:'||location.protocol==='file:')setInstallHelp('Você está abrindo um arquivo local. A instalação PWA não funciona neste modo; os arquivos precisarão estar publicados juntos em HTTPS. Os dados locais não serão apagados por esta configuração.');
+</script>
+</body></html>
